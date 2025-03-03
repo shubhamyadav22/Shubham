@@ -77,7 +77,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-sm text-muted-foreground">Phone</h4>
-                    <p className="mt-1">+1 (555) 123-4567</p>
+                    <p className="mt-1">+91 8953476861</p>
                   </div>
                 </div>
                 
@@ -87,7 +87,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-sm text-muted-foreground">Email</h4>
-                    <p className="mt-1">hello@example.com</p>
+                    <p className="mt-1">shubhamyadav22798@gmail.com</p>
                   </div>
                 </div>
                 
@@ -97,7 +97,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-sm text-muted-foreground">Location</h4>
-                    <p className="mt-1">San Francisco, CA</p>
+                    <p className="mt-1">Delhi , India</p>
                   </div>
                 </div>
               </div>
@@ -105,10 +105,10 @@ const Contact = () => {
               <div className="mt-12">
                 <h4 className="font-medium mb-4">Connect with me</h4>
                 <div className="flex gap-4">
-                  <a href="#" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                  <a target='blank' href="https://github.com/shubhamyadav22" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
                     <Github className="w-5 h-5" />
                   </a>
-                  <a href="#" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                  <a target='blank' href="https://www.linkedin.com/in/shubhamkry" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a href="#" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
