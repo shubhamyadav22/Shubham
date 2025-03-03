@@ -1,6 +1,5 @@
 
-import { useState, useEffect, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 interface SkillItemProps {
@@ -17,6 +16,7 @@ const SkillItem: React.FC<SkillItemProps> = ({
   delay = 0,
 }) => {
   const [progress, setProgress] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -33,18 +33,31 @@ const SkillItem: React.FC<SkillItemProps> = ({
   }, [inView, level, delay]);
 
   return (
-    <div ref={ref} className="flex flex-col gap-2">
+    <div 
+      ref={ref} 
+      className="flex flex-col gap-2 p-2 -mx-2 rounded-lg transition-all duration-300"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          {icon && <div className="text-primary">{icon}</div>}
-          <span className="font-medium">{name}</span>
+          {icon && (
+            <div className={`text-primary transition-transform duration-300 ${isHovered ? 'scale-125' : ''}`}>
+              {icon}
+            </div>
+          )}
+          <span className={`font-medium transition-all duration-300 ${isHovered ? 'text-gradient' : ''}`}>
+            {name}
+          </span>
         </div>
-        <span className="text-sm text-muted-foreground">{progress}%</span>
+        <span className={`text-sm transition-all duration-300 ${isHovered ? 'font-semibold text-primary' : 'text-muted-foreground'}`}>
+          {progress}%
+        </span>
       </div>
       
       <div className="skill-bar">
         <div
-          className="skill-progress"
+          className={`skill-progress ${isHovered ? 'shadow-[0_0_10px_rgba(0,0,0,0.2)]' : ''}`}
           style={{ width: `${progress}%` }}
         />
       </div>

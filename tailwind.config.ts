@@ -110,7 +110,11 @@ export default {
         "spin-slow": {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" }
-        }
+        },
+        "wiggle": {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -124,12 +128,15 @@ export default {
         "float": "float 6s ease-in-out infinite",
         "pulse-subtle": "pulse-subtle 3s ease-in-out infinite",
         "spin-slow": "spin-slow 12s linear infinite",
+        "wiggle": "wiggle 1s ease-in-out infinite",
       },
       boxShadow: {
         'subtle': '0 2px 10px rgba(0, 0, 0, 0.05)',
         'elevated': '0 10px 30px rgba(0, 0, 0, 0.08)',
         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
         'dark-glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+        'glow': '0 0 15px rgba(0, 0, 0, 0.1)',
+        'glow-lg': '0 0 25px rgba(0, 0, 0, 0.15)',
       }
     },
   },

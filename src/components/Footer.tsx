@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="section-container py-0">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col items-center md:items-start">
-            <div className="font-display font-semibold text-lg mb-2">Developer</div>
+            <div className="font-display font-semibold text-lg mb-2 hover-scale">Developer</div>
             <p className="text-muted-foreground text-sm">
               Building elegant digital experiences
             </p>
@@ -20,7 +20,7 @@ const Footer = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="social-icon"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
@@ -29,7 +29,7 @@ const Footer = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="social-icon"
               aria-label="Twitter"
             >
               <Twitter className="w-5 h-5" />
@@ -38,7 +38,7 @@ const Footer = () => {
               href="#" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="social-icon"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
@@ -53,10 +53,10 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-8">
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground nav-link">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground nav-link">
                 Terms of Service
               </a>
             </div>

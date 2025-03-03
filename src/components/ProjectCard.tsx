@@ -27,8 +27,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       className={cn(
-        "w-full relative overflow-hidden rounded-2xl border border-border group transition-all duration-500",
-        isHovered ? "shadow-elevated" : "shadow-subtle"
+        "w-full relative overflow-hidden rounded-2xl border border-border transition-all duration-500",
+        isHovered ? "shadow-elevated transform -translate-y-1" : "shadow-subtle"
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               alt={title}
               className={cn(
                 "object-cover w-full h-full transition-all duration-700",
-                isHovered ? "scale-105" : "scale-100"
+                isHovered ? "scale-110 brightness-110" : "scale-100"
               )}
             />
           </div>
@@ -49,14 +49,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         <div className="p-6 md:p-8 flex flex-col justify-between md:w-1/2">
           <div>
-            <h3 className="font-display text-xl font-medium mb-2">{title}</h3>
+            <h3 className={cn(
+              "font-display text-xl font-medium mb-2 transition-colors duration-300",
+              isHovered ? "text-gradient" : ""
+            )}>{title}</h3>
             <p className="text-muted-foreground mb-4">{description}</p>
             
             <div className="flex flex-wrap gap-2 mb-6">
               {technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs font-medium px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
+                  className={cn(
+                    "text-xs font-medium px-3 py-1 rounded-full transition-all duration-300",
+                    isHovered 
+                      ? "bg-primary text-primary-foreground" 
+                      : "bg-secondary text-secondary-foreground"
+                  )}
                 >
                   {tech}
                 </span>
@@ -70,7 +78,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-all duration-300 hover:scale-105"
               >
                 <Github className="w-4 h-4" />
                 <span>Code</span>
@@ -81,7 +89,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-all duration-300 hover:scale-105"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Live Demo</span>
