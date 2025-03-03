@@ -111,7 +111,7 @@ const Contact = () => {
                   <a target='blank' href="https://www.linkedin.com/in/shubhamkry" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                  <a target='blank' href="#" className="bg-secondary p-3 rounded-full text-primary transition-all hover:bg-primary hover:text-primary-foreground">
                     <Twitter className="w-5 h-5" />
                   </a>
                 </div>
