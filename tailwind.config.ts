@@ -129,6 +129,7 @@ export default {
         'subtle': '0 2px 10px rgba(0, 0, 0, 0.05)',
         'elevated': '0 10px 30px rgba(0, 0, 0, 0.08)',
         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+        'dark-glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
       }
     },
   },

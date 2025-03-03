@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +33,9 @@ const Header: React.FC = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4',
-        scrolled ? 'bg-white/80 backdrop-blur-md shadow-subtle' : 'bg-transparent'
+        scrolled 
+          ? 'bg-white/80 backdrop-blur-md shadow-subtle dark:bg-background/80 dark:backdrop-blur-md' 
+          : 'bg-transparent'
       )}
     >
       <div className="section-container py-0 flex items-center justify-between">
@@ -41,7 +44,7 @@ const Header: React.FC = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -51,39 +54,43 @@ const Header: React.FC = () => {
               {item.label}
             </a>
           ))}
+          <ThemeToggle />
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden flex flex-col space-y-1.5 p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={cn(
-              'w-6 h-0.5 bg-foreground transition-transform duration-300',
-              mobileMenuOpen && 'translate-y-2 rotate-45'
-            )}
-          />
-          <span
-            className={cn(
-              'w-6 h-0.5 bg-foreground transition-opacity duration-300',
-              mobileMenuOpen && 'opacity-0'
-            )}
-          />
-          <span
-            className={cn(
-              'w-6 h-0.5 bg-foreground transition-transform duration-300',
-              mobileMenuOpen && '-translate-y-2 -rotate-45'
-            )}
-          />
-        </button>
+        {/* Mobile Menu Button and Theme Toggle */}
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
+          <button
+            className="flex flex-col space-y-1.5 p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={cn(
+                'w-6 h-0.5 bg-foreground transition-transform duration-300',
+                mobileMenuOpen && 'translate-y-2 rotate-45'
+              )}
+            />
+            <span
+              className={cn(
+                'w-6 h-0.5 bg-foreground transition-opacity duration-300',
+                mobileMenuOpen && 'opacity-0'
+              )}
+            />
+            <span
+              className={cn(
+                'w-6 h-0.5 bg-foreground transition-transform duration-300',
+                mobileMenuOpen && '-translate-y-2 -rotate-45'
+              )}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
       <div
         className={cn(
-          'md:hidden absolute top-full left-0 right-0 bg-white/90 backdrop-blur-md transition-all duration-300 border-t border-border overflow-hidden',
+          'md:hidden absolute top-full left-0 right-0 bg-white/90 backdrop-blur-md transition-all duration-300 border-t border-border dark:bg-background/90 dark:backdrop-blur-md overflow-hidden',
           mobileMenuOpen ? 'max-h-60 shadow-subtle' : 'max-h-0'
         )}
       >
