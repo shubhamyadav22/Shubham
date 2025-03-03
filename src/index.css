@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210 40% 98%;
     --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
@@ -25,7 +25,7 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 240 4.8% 95.9%;
+    --accent: 213 94% 68%;
     --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,39 +33,39 @@
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 142.1 76.2% 36.3%;
+    --ring: 222 89% 52%;
 
     --radius: 1rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 240 10% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
+    --card: 240 10% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 240 10% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 3.7% 15.9%;
+    --muted: 240 10% 15%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 213 94% 68%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 240 3.7% 25%;
+    --input: 240 3.7% 25%;
+    --ring: 222 89% 52%;
   }
 
   * {
@@ -79,10 +79,21 @@
   body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    background-image: 
+      radial-gradient(circle at 20% 35%, hsla(var(--accent)/5%) 0%, transparent 50%),
+      radial-gradient(circle at 85% 20%, hsla(var(--ring)/8%) 0%, transparent 55%);
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background-image: 
+      radial-gradient(circle at 20% 35%, hsla(var(--accent)/10%) 0%, transparent 50%),
+      radial-gradient(circle at 85% 20%, hsla(var(--ring)/15%) 0%, transparent 55%);
+    background-attachment: fixed;
   }
 
   ::selection {
-    @apply bg-primary/10 text-primary;
+    @apply bg-accent/20 text-accent;
   }
 }
 
@@ -112,10 +123,10 @@
   }
 
   .glass-panel {
-    @apply bg-white/70 backdrop-blur-lg rounded-2xl shadow-glass border border-white/20 
-           transition-all duration-300 hover:shadow-elevated hover:bg-white/80
-           dark:bg-black/40 dark:backdrop-blur-xl dark:border-white/10 dark:shadow-dark-glass 
-           dark:hover:bg-black/50 dark:hover:border-white/20;
+    @apply bg-white/60 backdrop-blur-xl rounded-2xl shadow-glass border border-white/30 
+           transition-all duration-300 hover:shadow-elevated hover:bg-white/70
+           dark:bg-black/30 dark:backdrop-blur-xl dark:border-white/10 dark:shadow-dark-glass 
+           dark:hover:bg-black/40 dark:hover:border-white/20;
   }
 
   .skill-bar {
@@ -123,15 +134,15 @@
   }
 
   .skill-progress {
-    @apply h-full bg-primary absolute left-0 top-0 rounded-full transition-all duration-1000 ease-out;
+    @apply h-full bg-accent absolute left-0 top-0 rounded-full transition-all duration-1000 ease-out;
   }
 
   .hover-card {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-2;
   }
   
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.1)];
+    @apply transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] dark:hover:shadow-[0_0_15px_rgba(59,130,246,0.4)];
   }
   
   .hover-scale {
@@ -139,11 +150,11 @@
   }
   
   .nav-link {
-    @apply relative overflow-hidden py-2 transition-all duration-300 hover:text-primary;
+    @apply relative overflow-hidden py-2 transition-all duration-300 hover:text-accent;
   }
   
   .nav-link::after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300;
   }
   
   .nav-link:hover::after {
@@ -151,7 +162,17 @@
   }
   
   .social-icon {
-    @apply p-3 rounded-full transition-all duration-300 bg-secondary hover:bg-primary hover:text-primary-foreground hover:scale-110;
+    @apply p-3 rounded-full transition-all duration-300 bg-secondary/70 hover:bg-accent/20 hover:text-accent hover:scale-110 shadow-sm hover:shadow-md;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent to-ring;
+  }
+
+  .animated-border {
+    @apply relative after:absolute after:inset-0 after:rounded-lg after:border after:border-transparent 
+          after:bg-gradient-to-r after:from-accent after:to-ring after:opacity-0 
+          after:transition-all after:duration-500 hover:after:opacity-100;
   }
 }
 
@@ -189,10 +210,27 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent via-ring to-indigo-500 bg-clip-text text-transparent;
   }
   
   .bg-gradient-subtle {
     @apply bg-gradient-to-br from-background to-secondary/50;
+  }
+
+  .bg-grain {
+    @apply relative z-0;
+  }
+
+  .bg-grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .dark .bg-grain::before {
+    opacity: 0.15;
   }
 }
