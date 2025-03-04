@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
 
         <AnimatedText
-          text="Creating elegant digital experiences"
+          text="Crafting Seamless and Captivating Digital Experiences."
           className="section-heading max-w-3xl mx-auto mb-6"
           animation="letter-reveal"
         />
