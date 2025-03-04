@@ -34,8 +34,7 @@ const Hero = () => {
         />
 
         <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-12 animate-fade-in animate-delay-500">
-          I design and build modern web applications with a focus on performance, 
-          accessibility, and elegant user experiences.
+        I design and build modern web applications with a focus on performance, accessibility, and seamless user experiences.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animate-delay-700">

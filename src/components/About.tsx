@@ -21,26 +21,22 @@ const About = () => {
               </div>
 
               <AnimatedText
-                text="Developer, designer, and problem solver"
+                text="Developer | Designer | Problem Solver"
                 className="text-3xl md:text-4xl font-display font-semibold mb-6 tracking-tight"
                 animation="fade-in"
               />
 
               <div className="space-y-6 text-muted-foreground">
                 <p className={`transform transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '100ms' }}>
-                  I'm a passionate developer with a strong foundation in both frontend and backend technologies. 
-                  My approach combines technical expertise with an eye for design, creating applications that are 
-                  not only functional but also intuitive and visually appealing.
+                Enthusiastic Java Developer skilled in building scalable web applications using Spring Boot, Hibernate, and React.js. Passionate about backend optimization, database management, and writing clean, efficient code. Seeking an opportunity to contribute and grow in a dynamic tech environment.
                 </p>
                 
                 <p className={`transform transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '200ms' }}>
-                  With a background in computer science and years of hands-on experience, I've developed a 
-                  deep understanding of modern web technologies and best practices in software development.
+                With a strong background in computer science and extensive hands-on experience, I have developed a deep expertise in modern web technologies and best practices in software development.
                 </p>
 
                 <p className={`transform transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '300ms' }}>
-                  When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                  projects, or sharing my knowledge through blog posts and community engagement.
+                When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing my knowledge through blog posts and community engagement.
                 </p>
               </div>
             </div>
@@ -55,15 +51,15 @@ const About = () => {
                 <div>
                   <h3 className="font-medium text-lg mb-2">Education</h3>
                   <p className="text-muted-foreground mb-4">
-                    Bachelor of Science in Computer Science
+                    Master of Computer Applications 
                     <br />
-                    University of Technology, 2018-2022
+                    Ajay Kumar Garg Engineering College 
                   </p>
                   <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
                     <li>Data Structures and Algorithms</li>
-                    <li>Web Development</li>
-                    <li>Database Systems</li>
-                    <li>Software Engineering</li>
+                    <li>Java , Spring MVC , Spring Boot</li>
+                    <li>JavaScript , React Js</li>
+                    <li>MySQL</li>
                   </ul>
                 </div>
               </div>
@@ -75,17 +71,18 @@ const About = () => {
                   <Briefcase className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-lg mb-2">Work Experience</h3>
+                  <h3 className="font-medium text-lg mb-2">Internship Experience</h3>
                   <p className="text-muted-foreground mb-4">
-                    Software Developer at Tech Innovations
+                    Full Stack Java Developer at CETPA Infotech Pvt Ltd
                     <br />
-                    2022 - Present
+                    July-2024 to January-2025
                   </p>
                   <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                    <li>Developing responsive web applications</li>
-                    <li>Optimizing application performance</li>
-                    <li>Collaborating with design and product teams</li>
-                    <li>Implementing modern frontend frameworks</li>
+                    <li>Developed RESTful APIs with Spring Boot, enhancing system communication and reducing response time.</li>
+                    <li>Implemented secure authentication mechanisms to safeguard user data, ensuring compliance with industry stan-
+                    dards.</li>
+                    <li>Integrated a responsive front-end using React, improving user experience and engagement.</li>
+                    <li>Automated build and deployment with Maven, streamlining the deployment process.</li>
                   </ul>
                 </div>
               </div>
@@ -99,13 +96,13 @@ const About = () => {
                 <div>
                   <h3 className="font-medium text-lg mb-2">Interests</h3>
                   <p className="text-muted-foreground mb-2">
-                    Beyond coding, I'm passionate about these areas:
+                  Beyond coding, I'm passionate about innovation, design, and problem-solving.
                   </p>
                   <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                    <li>UI/UX Design</li>
-                    <li>Open Source Contribution</li>
-                    <li>Tech Community Engagement</li>
                     <li>Continuous Learning</li>
+                    <li>Web Developement</li>
+                    <li>Tech Community Engagement</li>
+                    {/* <li>Open Source Contribution</li> */}
                   </ul>
                 </div>
               </div>
@@ -119,10 +116,10 @@ const About = () => {
                 <div>
                   <h3 className="font-medium text-lg mb-2">Certifications</h3>
                   <ul className="list-disc list-inside text-sm text-muted-foreground space-y-2">
-                    <li>AWS Certified Developer - Associate</li>
-                    <li>React Advanced Concepts</li>
-                    <li>Modern JavaScript Development</li>
-                    <li>UI/UX Design Fundamentals</li>
+                    <li> Java Full Stack Development CETPA INFOTECH</li>
+                    <li>Java Full Stack Development MSME</li>
+                    <li>Data Structures and Algorithms using JAVA</li>
+                    {/* <li>UI/UX Design Fundamentals</li> */}
                   </ul>
                 </div>
               </div>

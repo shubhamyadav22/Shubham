@@ -12,27 +12,27 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with payment processing, user accounts, and inventory management.',
-      imageSrc: 'https://images.unsplash.com/photo-1621768216848-c4d375ce4102?auto=format&fit=crop&q=80&w=2574',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
-      githubUrl: '#',
+      title: 'Banking Application ',
+      description: 'Designed and implemented secure banking transactions with real-time balance updates, ensuring data integrity, optimized performance, and a seamless user experience.',
+      imageSrc: '/src/components/banking_application.png',
+      technologies: ['Java', 'Spring Boot', 'Hibernate', 'Spring JPA', 'Thymeleaf', 'MySQL'],
+      githubUrl: 'https://github.com/shubhamyadav22',
       liveUrl: '#',
     },
     {
-      title: 'Task Management App',
-      description: 'A productivity application for managing tasks, projects, and team collaborations with real-time updates.',
-      imageSrc: 'https://images.unsplash.com/photo-1585675100414-add2e465a136?auto=format&fit=crop&q=80&w=2564',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS', 'Firestore'],
-      githubUrl: '#',
+      title: 'Daily Task Tracker ',
+      description: 'Developed a full-stack To-Do List app for efficient task management, seamless user interaction, and smooth backend operations.',
+      imageSrc: '/src/components/daily_task_tracker.png',
+      technologies: ['React.js', 'Bootstrap', 'Java', 'Spring Boot', 'Spring Data JPA', 'MySQL', 'Axios'],
+      githubUrl: 'https://github.com/shubhamyadav22',
       liveUrl: '#',
     },
     {
-      title: 'Finance Dashboard',
-      description: 'Interactive dashboard for visualizing financial data with customizable charts and reporting features.',
-      imageSrc: 'https://images.unsplash.com/photo-1660751767174-063d76afd7e0?auto=format&fit=crop&q=80&w=2680',
-      technologies: ['React', 'TypeScript', 'D3.js', 'GraphQL', 'Prisma'],
-      githubUrl: '#',
+      title: 'Customer Management System',
+      description: 'Built a customer management system with CRUD operations, dynamic search, and a responsive, user-friendly interface for seamless data management.',
+      imageSrc: '/src/components/customer_management_system.png',
+      technologies: ['React.js', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+      githubUrl: 'https://github.com/shubhamyadav22',
       liveUrl: '#',
     },
   ];
@@ -46,13 +46,13 @@ const Projects = () => {
           </div>
 
           <AnimatedText
-            text="Featured Projects"
+            text="My Recent Work"
             className="section-heading"
             animation="fade-in"
           />
 
           <p className="section-subheading mx-auto">
-            A selection of my recent work, showcasing my skills in frontend and backend development.
+            A selection of my recent work, showcasing my skills in Full Stack development.
           </p>
         </div>
 

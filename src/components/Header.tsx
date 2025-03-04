@@ -40,7 +40,7 @@ const Header: React.FC = () => {
     >
       <div className="section-container py-0 flex items-center justify-between">
         <a href="#home" className="font-display font-semibold text-xl">
-          Developer
+          Software Developer
         </a>
 
         {/* Desktop Navigation */}

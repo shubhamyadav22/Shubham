@@ -75,7 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="flex gap-4">
             {githubUrl && (
               <a
-                href={githubUrl}
+                href={'https://github.com/shubhamyadav22'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-all duration-300 hover:scale-105"

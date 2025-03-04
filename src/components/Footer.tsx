@@ -17,7 +17,7 @@ const Footer = () => {
 
           <div className="flex space-x-6 items-center">
             <a 
-              href="#" 
+              href="https://github.com/shubhamyadav22" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon"
@@ -35,7 +35,7 @@ const Footer = () => {
               <Twitter className="w-5 h-5" />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/shubhamkry" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-icon"
